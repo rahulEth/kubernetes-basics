@@ -1,0 +1,12 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: storage-class-name # refereing to persistnet-volume-claim.yaml
+provisioner: kubernetes.io/aws-ebs  # main attribute because it tell kubernetes which provisioner to be used for specfic storage/cloud provder to created PV
+parameters: 
+  type: io1
+  iopsPerGB: "10"
+  fsType: ext4
+
+
+

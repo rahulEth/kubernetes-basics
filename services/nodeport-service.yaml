@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata: 
+   name: ms-service-nodeport
+spec:
+  type: nodePort
+  selector: 
+    app: microservice-one
+  port:
+     - protocol: TCP
+       port: 3200
+       targetPort: 3000
+       nodePort: 30008  # range 30000 -32767, allows client directly connect to a perticular port
+          

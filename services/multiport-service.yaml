@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata: 
+     name: mongodb-one-service
+spec:
+  selector: 
+     app: mongodb-one   
+  ports:
+    - name: mongodb
+      protocol: TCP
+      port: 27017  # service port 
+      targetPort: 27017 # mongodb pod port
+    - name: mongodb-exporter
+      protocol: TCP
+      port: 9216 # service port 
+      targetPort: 9216   # mongodb-exporter pod port 

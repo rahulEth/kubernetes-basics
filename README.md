@@ -39,4 +39,37 @@ kubens my-namespace
 
 # to check the changed active name space again type kubens
 
+# install minikube controller in minikube 
+
+minikube addons enable ingress 
+
+# get name space
+kubectl get ns
+
+
+
+# helm commands
+
+helm install <chartname>
+
+# values injection into tehmplate file
+
+helm install --values=my-values.yaml <chartname>
+
+helm upgrate <chartname>
+
+helm rollback <chartname>
+
+# services commands
+
+kubectl get svc
+
+# get endpoints
+
+kubectl get endpoints
+
+
+
+
+
 

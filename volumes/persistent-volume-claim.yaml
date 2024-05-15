@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClain
+metadata:
+   name: pvc-name
+spec:
+   storageClassName: storage-class-name 
+   volumeMode: Filesystem
+   accessModes:
+      - ReadWriteOnce
+   resources: 
+      requestes: 
+         storage: 10Gi
+
+

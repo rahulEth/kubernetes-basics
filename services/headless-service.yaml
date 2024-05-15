@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata: 
+     name: mongodb-one-service
+spec:
+   clusterIP: None  # setting headless cluster ip to null
+  selector: 
+     app: mongodb
+  ports:
+    - name: mongodb
+      protocol: TCP
+      port: 27017  # service port 
+      targetPort: 27017 # mongodb pod port

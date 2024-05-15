@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata: 
+   name: ms-service-lordbalancer
+spec:
+  type: nodeBalancer
+  selector: 
+    app: microservice-one
+  port:
+     - protocol: TCP
+       port: 3200
+       targetPort: 3000 # port of the pod
+       nodePort: 30010  # range 30000 -32767, allows client directly connect to a perticular port
+          
